@@ -12,10 +12,10 @@
 class Darpan < Formula
   desc "Bootstrap and run a local Darpan reconciliation development stack"
   homepage "https://github.com/drpn-ai/darpan"
-  url "https://github.com/drpn-ai/darpan-cli/releases/download/v0.1.0/darpan-0.1.0.tar.gz"
-  sha256 "6aa4a1c2fa145815610724a2a8f5a0729d723a00698b1cf0c72bd37c074c8218"
+  url "https://github.com/drpn-ai/darpan-cli/releases/download/v0.1.1/darpan-0.1.1.tar.gz"
+  sha256 "094b86669c7e1bec56d817abf796f1a0187850cfce05b3ba935d16aa6c0f15ef"
   license "Apache-2.0"
-  # version is inferred from the url (darpan-0.1.0.tar.gz)
+  # version is inferred from the url (darpan-0.1.1.tar.gz)
 
   depends_on "git"
   depends_on "node"
