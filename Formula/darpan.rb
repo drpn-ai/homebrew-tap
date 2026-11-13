@@ -13,10 +13,10 @@
 class Darpan < Formula
   desc "Use Darpan from your terminal or Claude Code, or run a local Darpan stack"
   homepage "https://github.com/drpn-ai/darpan-cli"
-  url "https://github.com/drpn-ai/darpan-cli/releases/download/v0.2.0/darpan-0.2.0.tar.gz"
-  sha256 "678e73d588c45595c214d22798229edceed9a10b931d3c7b881b5abaecb9bcaf"
+  url "https://github.com/drpn-ai/darpan-cli/releases/download/v0.2.1/darpan-0.2.1.tar.gz"
+  sha256 "ab16fb4e4282ff2396be9888c8ccb329a78261c7645594031f8aba0df0e28b1a"
   license "Apache-2.0"
-  # version is inferred from the url (darpan-0.2.0.tar.gz)
+  # version is inferred from the url (darpan-0.2.1.tar.gz)
 
   # The CLI (login, data commands, MCP) needs only Node. The local stack's JDK 21
   # and git are checked by `darpan doctor` / `darpan up` when they run, so users
