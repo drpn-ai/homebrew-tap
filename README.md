@@ -10,10 +10,11 @@ brew trust --formula drpn-ai/tap/darpan
 brew install darpan
 ```
 
-Then:
+That installs the CLI and Node only. To run a local stack, add JDK 21 first:
 
 ```bash
-darpan doctor   # check prerequisites (JDK 21, Node 20+, ports)
+brew install --cask temurin@21
+darpan doctor   # check prerequisites (JDK 21, Node, git, ports)
 darpan up       # clone, load, and run the local stack
 ```
 

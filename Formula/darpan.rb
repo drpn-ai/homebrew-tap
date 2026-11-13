@@ -18,9 +18,10 @@ class Darpan < Formula
   license "Apache-2.0"
   # version is inferred from the url (darpan-0.2.0.tar.gz)
 
-  depends_on "git"
+  # The CLI (login, data commands, MCP) needs only Node. The local stack's JDK 21
+  # and git are checked by `darpan doctor` / `darpan up` when they run, so users
+  # who only sign in to a hosted Darpan do not install a JDK and its font stack.
   depends_on "node"
-  depends_on "openjdk@21"
 
   def install
     libexec.install "bin", "agent"
@@ -43,9 +44,10 @@ class Darpan < Formula
       User settings > CLI sessions. Setup guide:
       https://docs.drpn.ai/getting-started/set-up-darpan-cli
 
-      To run a local Darpan stack instead (JDK 21, Moqui 4 / Spark 4):
+      To run a local Darpan stack instead (Moqui 4 / Spark 4), add JDK 21 first:
 
-        darpan doctor   # verify prerequisites
+        brew install --cask temurin@21
+        darpan doctor   # verify prerequisites (JDK 21, git, ports)
         darpan up       # clone, load, and run the stack (first run takes a while)
     EOS
   end
