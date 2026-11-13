@@ -1,6 +1,6 @@
 # Homebrew formula for the `darpan` CLI.
 #
-# Install:  brew tap drpn-ai/tap && brew install darpan
+# Install:  brew tap drpn-ai/tap && brew trust --formula drpn-ai/tap/darpan && brew install darpan
 #
 # This installs the launcher (bin/darpan) and the Node CLI it hands data and
 # action commands to (agent/). `darpan up` does the cloning, Gradle build, data

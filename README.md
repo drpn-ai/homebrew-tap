@@ -6,6 +6,7 @@ Homebrew tap for Darpan tools. Destined for `drpn-ai/homebrew-tap` (the repo nam
 
 ```bash
 brew tap drpn-ai/tap
+brew trust --formula drpn-ai/tap/darpan
 brew install darpan
 ```
 
