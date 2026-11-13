@@ -18,6 +18,16 @@ class Darpan < Formula
   license "Apache-2.0"
   # version is inferred from the url (darpan-0.2.3.tar.gz)
 
+  # One bottle for every platform (the files are shell and TypeScript). Pouring a
+  # bottle skips Homebrew's build checks, so an install never needs Xcode or the
+  # Command Line Tools (macOS betas refuse to build with older ones). Built with
+  # `brew install --build-bottle` + `brew bottle --no-rebuild`, the file renamed to
+  # .all. and attached to the darpan-cli release; see the darpan-cli README.
+  bottle do
+    root_url "https://github.com/drpn-ai/darpan-cli/releases/download/v0.2.3"
+    sha256 cellar: :any_skip_relocation, all: "8153c09e5c11759056ee756d31d3ecb3364425544b4d3d0c8e1e062c389796ad"
+  end
+
   # No depends_on: a Homebrew dependency is upgraded on every install (node and
   # its libraries) and compiled from source on Macs Homebrew has no bottle for.
   # The launcher checks for Node 22.18+ before any data command, and `darpan
