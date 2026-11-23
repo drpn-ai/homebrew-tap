@@ -13,10 +13,10 @@
 class Darpan < Formula
   desc "Use Darpan from your terminal or Claude Code, or run a local Darpan stack"
   homepage "https://github.com/drpn-ai/darpan-cli"
-  url "https://github.com/drpn-ai/darpan-cli/releases/download/v0.2.3/darpan-0.2.3.tar.gz"
-  sha256 "dbaf69850215c4c70f1958b5ab7e9eadb3e82e68c12f21e144b5f728c501051f"
+  url "https://github.com/drpn-ai/darpan-cli/releases/download/v0.2.4/darpan-0.2.4.tar.gz"
+  sha256 "44f87ded0ae862e5f0f972869929a021116e6f2833d6de6a6ea0fd2e254fabbc"
   license "Apache-2.0"
-  # version is inferred from the url (darpan-0.2.3.tar.gz)
+  # version is inferred from the url (darpan-0.2.4.tar.gz)
 
   # One bottle for every platform (the files are shell and TypeScript). Pouring a
   # bottle skips Homebrew's build checks, so an install never needs Xcode or the
@@ -24,8 +24,8 @@ class Darpan < Formula
   # `brew install --build-bottle` + `brew bottle --no-rebuild`, the file renamed to
   # .all. and attached to the darpan-cli release; see the darpan-cli README.
   bottle do
-    root_url "https://github.com/drpn-ai/darpan-cli/releases/download/v0.2.3"
-    sha256 cellar: :any_skip_relocation, all: "8153c09e5c11759056ee756d31d3ecb3364425544b4d3d0c8e1e062c389796ad"
+    root_url "https://github.com/drpn-ai/darpan-cli/releases/download/v0.2.4"
+    sha256 cellar: :any_skip_relocation, all: "db220b42905c870a50712df6411db4cad865462329ccd2faecb941aca37c2a29"
   end
 
   # No depends_on: a Homebrew dependency is upgraded on every install (node and
