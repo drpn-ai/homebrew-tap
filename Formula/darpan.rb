@@ -24,6 +24,11 @@ class Darpan < Formula
   # `brew install --build-bottle` + `brew bottle --no-rebuild`, the file renamed to
   # .all. and attached to the darpan-cli release; see the darpan-cli README.
 
+  bottle do
+    root_url "https://github.com/drpn-ai/darpan-cli/releases/download/v0.6.0"
+    sha256 cellar: :any_skip_relocation, all: "dfdc1fe1adcb0a4852b320a69fc8b9f5dd577a6f9c2c14af04ff53781c1572b6"
+  end
+
   # No depends_on: a Homebrew dependency is upgraded on every install (node and
   # its libraries) and compiled from source on Macs Homebrew has no bottle for.
   # The launcher checks for Node 22.18+ before any data command, and `darpan
