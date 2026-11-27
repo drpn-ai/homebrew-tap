@@ -13,10 +13,10 @@
 class Darpan < Formula
   desc "Use Darpan from your terminal or Claude Code, or run a local Darpan stack"
   homepage "https://github.com/drpn-ai/darpan-cli"
-  url "https://github.com/drpn-ai/darpan-cli/releases/download/v0.6.0/darpan-0.6.0.tar.gz"
-  sha256 "d734a32b5c7f3a53519a91ad0f5864da0777daebc87a4483e3f06ec69cf2e44b"
+  url "https://github.com/drpn-ai/darpan-cli/releases/download/v0.7.0/darpan-0.7.0.tar.gz"
+  sha256 "6d93fdf70f58e354e85ebcf9508fc3871041c82ae22628321d442c6ce3796681"
   license "Apache-2.0"
-  # version is inferred from the url (darpan-0.6.0.tar.gz)
+  # version is inferred from the url (darpan-0.7.0.tar.gz)
 
   # One bottle for every platform (the files are shell and TypeScript). Pouring a
   # bottle skips Homebrew's build checks, so an install never needs Xcode or the
@@ -24,10 +24,6 @@ class Darpan < Formula
   # `brew install --build-bottle` + `brew bottle --no-rebuild`, the file renamed to
   # .all. and attached to the darpan-cli release; see the darpan-cli README.
 
-  bottle do
-    root_url "https://github.com/drpn-ai/darpan-cli/releases/download/v0.6.0"
-    sha256 cellar: :any_skip_relocation, all: "dfdc1fe1adcb0a4852b320a69fc8b9f5dd577a6f9c2c14af04ff53781c1572b6"
-  end
 
   # No depends_on: a Homebrew dependency is upgraded on every install (node and
   # its libraries) and compiled from source on Macs Homebrew has no bottle for.
